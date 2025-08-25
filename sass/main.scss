@@ -1,0 +1,483 @@
+// custom styles
+$primary: #355fe8;
+$dark: #000000;
+$secondary: #cccccc;
+$light: #2b2b2b;
+$white: #ffffff;
+$success: #14ba62;
+$progress-height: 10px;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=ZCOOL+KuaiLe&display=swap');
+
+// body
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .interests, nav a {
+  font-family: 'Raleway', sans-serif;
+}
+
+.bg {
+  height: 90vh; 
+  background-image: url(/assets/bg.jpg);
+  background-size: cover; 
+  background-position: center 1vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+// header and nav
+header {
+  background-color: rgba(0, 0, 0, .85); 
+  color: white; 
+  top: 0;
+  z-index: 4;
+}
+
+@media(max-width:'576px') {
+  .collapse-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 3rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .90);
+    z-index: 2;
+  }
+}
+
+.intro {
+  font-size: 5.5dvw;
+  margin-bottom: -8px;
+}
+
+.navv {
+  color: $secondary;
+  font-size: 17px;
+}
+
+.navv li {
+  font-family: 'Raleway', sans-serif;
+  list-style: none;
+  padding-bottom: 8px;
+  padding-right: 28px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.navv a {
+  text-decoration: none;
+  color: $secondary;
+}
+
+.navv li a:hover {
+  color: $white;
+  // border-bottom: 2px solid $primary;
+}
+
+.navv li:hover .bb {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.page-nav li:hover .bb {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+a i {
+  color: $white;
+}
+
+section {
+  opacity: 0;
+  animation: fadeIn 0.30s ease-in forwards;
+  background-color: rgba(0, 0, 0, .87);
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.bottom {
+  height: 10vh;
+}
+
+// progress bar and makeshift border bottoms
+.bb-home {
+  height: 2px;
+  width: 24px;
+  background: $primary;
+}
+
+.bb {
+  height: 2px;
+  width: 24px;
+  background: $primary;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.bb-s {
+  height: 9.5px;
+  width: 24px;
+  background: $primary;
+}
+
+.bb-swrap {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.bb-text {
+  font-size: 11px;
+}
+
+// background colors stuff
+.container-bg {
+  background-color: rgba(0, 0, 0, .65);
+  padding: 48px;
+}
+
+.item {
+  color: $white;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+// social links
+.social-wrap {
+  margin-top: 10px;
+}
+
+.social {
+  background-color: rgba(40, 40, 40, .65);
+  transition: 0.4s;
+  padding: 10px 10px;
+  border-radius: 100%;
+}
+
+.social i {
+  padding: 5px 4px;
+  color: $white;
+}
+
+.social:hover {
+  background-color: $primary;
+}
+
+// title
+.subtitle {
+  font-weight: bold;
+  font-size: 34px;
+  margin-top: -15px;
+}
+
+// .profile-text {
+//   font-size: 17px;
+// }
+
+// blue line and dot
+.blue-line {
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: 2px;
+  color: #b5b5b5;
+  font-size: 14px;
+}
+
+.blue-line::after {
+  content: '';
+  height: 2px;
+  width: 120px;
+  background: $primary;
+  margin-left: 10px;
+}
+
+.blue-text {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: -5px;
+}
+
+.blue-dot {
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: $primary;
+  z-index: 1;
+  margin-left: -33.5px;
+  margin-right: 13px;
+}
+
+.blue-container {
+  margin-bottom: -15px;
+}
+
+// about stuff
+.about-description {
+  font-size: 17px;
+}
+
+.icon-box {
+  position: relative;
+  text-align: center;
+  padding: 24px;
+}
+
+.acc-icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  padding: 5px 12px;
+  border-radius: 100%;
+  color: $primary;
+  background-color: rgba(52, 52, 52, .55);
+}
+
+.icon-box p {
+  font-weight: 500;
+  font-size: 36px;
+  margin-bottom: -0.5px;
+}
+
+.icon-box h6 {
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.interests {
+  font-size: 16px;
+}
+
+.interest-box i {
+  font-size: 26px;
+}
+
+.col-lg-3:nth-of-type(1) .interest-box i {
+  color: #ffbc2b;
+}
+.col-lg-3:nth-of-type(2) .interest-box i {
+  color: #5578ff;
+}
+.col-lg-3:nth-of-type(3) .interest-box i {
+  color: #e80368;
+}
+.col-lg-3:nth-of-type(4) .interest-box i {
+  color: #e361ff;
+}
+.col-lg-3:nth-of-type(5) .interest-box i {
+  color: #47aeff;
+}
+.col-lg-3:nth-of-type(6) .interest-box i {
+  color: #ffa76e;
+}
+.col-lg-3:nth-of-type(7) .interest-box i {
+  color: #11dbcf;
+}
+.col-lg-3:nth-of-type(8) .interest-box i {
+  color: #4233ff;
+}
+.col-lg-3:nth-of-type(9) .interest-box i {
+  color: #b2904f;
+}
+.col-lg-3:nth-of-type(10) .interest-box i {
+  color: #b20969;
+}
+.col-lg-3:nth-of-type(11) .interest-box i {
+  color: #ff5828;
+}
+.col-lg-3:nth-of-type(12) .interest-box i {
+  color: #29cc61;
+}
+
+.interest-box:hover {
+  background-color: $light;
+  transition: 0.6s;
+}
+
+// resume stuff
+.resume h2 {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.resume h5 {
+  font-size: 16px;
+  padding: 6px 15px;
+}
+
+.resume ul {
+  margin-left: -16px;
+}
+
+.resume li {
+  margin-bottom: 0.5rem;
+  font-size: 16.5px;
+}
+
+.resume-year {
+  background-color: $light;
+  margin-bottom: 7px;
+  width: fit-content;
+}
+
+// services
+.services .item {
+  transition: 0.7s;
+}
+
+.services h2 {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.services p {
+  font-size: 15px;
+}
+
+.services i {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.service-iconbox {
+  background-color: $primary;
+}
+
+.service:hover {
+  background-color: $primary;
+}
+
+.service:hover i {
+  color: $primary;
+}
+
+.service:hover .service-iconbox {
+  background-color: $white;
+}
+
+// .card-behind {
+//   background-color: $light;
+//   position: absolute;
+//   bottom: 10%;
+//   right: 36vw;
+//   z-index: 0;
+// }
+
+// portfolio
+.filter-button button:hover {
+  background: $primary;
+}
+
+.filter-button button {
+  font-size: 15px;
+  padding: 5px 20px;
+}
+
+.portfolio-hover {
+  display: none;
+  animation: zoomOut .45s ease-in-out forwards;
+  background-color: rgba(0, 0, 0, .75);
+}
+
+.portfolio-hover h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.portfolio-hover p {
+  font-size: 14px;
+}
+
+.portfolio-hover i {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.portfolio-hover i:hover {
+  color: #14ba62;
+}
+
+.portfolio-item:hover .portfolio-hover {
+  display: block;
+}
+
+
+// contact
+.contact-info h4 {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contact-info p {
+  font-size: 14px;
+}
+
+.contact-social i {
+  font-size: 16px;
+}
+
+.contact-social i:hover {
+  color: $primary;
+}
+
+form {
+  color: #444444;
+  padding: 20px;
+  width: 100%;
+}
+
+input[type='email'], input[type='text'], .textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border: 0;
+  transition: 0.3s;
+  color: #fff;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 12px;
+}
+
+input[type='email']:focus, input[type='text']:focus, .textarea:focus {
+  background-color: rgba(255, 255, 255, 0.11);
+  border: 0;
+  outline:0;
+}
+
+.input input {
+  width: 49%;
+}
+
+form .button:hover {
+  background-color: $success;
+}
+
+
+// animation
+@keyframes zoomOut {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes navBottom {
+  0% {
+    transform: translateX(-20)
+  }
+  100% {
+    transform: translateX(0%)
+  }
+}
