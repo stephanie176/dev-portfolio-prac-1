@@ -427,16 +427,16 @@ section {
 }
 
 .interest-box:hover {
-  background-color: $light;
+  background-color: rgba(255, 255, 255, .15);
   transition: 0.6s;
 }
 
 .carousel-container {
-height: 65vh;
+  height: min(65dvh, 650px);
 }
 
 .carousel-content {
-  width: 60vw;
+  width: 60dvw;
 }
 
 .carousel-content i {
