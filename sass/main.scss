@@ -34,6 +34,17 @@ h1, h2, h3, h4, h5, h6, .interests, nav a {
   background-position: right 8vh;
   background-size: cover;
   background-attachment: fixed;
+  z-index: -3;
+}
+
+
+@media(max-width:780px) {
+  .home {
+    background-color: rgba(0, 0, 0, .50);
+    width: 100dvw;
+    height: 100dvh;
+    transition: .4s ease;
+  }
 }
 
 // header and nav
