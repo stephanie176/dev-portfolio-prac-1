@@ -579,6 +579,21 @@ section {
   display: block;
 }
 
+.portfolio-item {
+  transition: all 0.4s ease;
+}
+
+.portfolio-item.hide {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
+.portfolio-item.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
 // .portfolio-carousel {
 //   position: absolute;
 //   top: 0;

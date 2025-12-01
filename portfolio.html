@@ -1058,18 +1058,31 @@
   <div class="bottom">
   </div>
   <script>
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const portfolioItems = document.querySelectorAll(".portfolio-item");
+    // FILTER BUTTONS
+      document.addEventListener("DOMContentLoaded", () => {
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const portfolioItems = document.querySelectorAll(".portfolio-item");
 
-    filterButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        let filter = btn.getAttribute("data-filter");
+      filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          // Update button styles
+          filterButtons.forEach(btn => {
+            btn.classList.remove("btn-primary");
+            btn.classList.add("btn-light");
+          });
+          button.classList.remove("btn-light");
+          button.classList.add("btn-primary");
 
-        // Update button styles
-        filterButtons.forEach(b => b.classList.remove("btn-primary"));
-        filterButtons.forEach(b => b.classList.add("btn-light"));
-        btn.classList.add("btn-primary");
-        btn.classList.remove("btn-light");
+          const filterValue = button.getAttribute("data-filter");
+
+          portfolioItems.forEach(item => {
+            if (filterValue === "all" || item.classList.contains(filterValue)) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
       });
     });
   </script>
